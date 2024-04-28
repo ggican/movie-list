@@ -92,6 +92,7 @@ export type MovieList = {
   rating: number;
   love?: boolean;
   imageUrl: string;
+  desc: string;
   onLove: (values: ILoveValue) => void;
 };
 

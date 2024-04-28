@@ -19,8 +19,8 @@ export default function LayoutLang({ params }: LayoutLangProps) {
       description={params?.lang.toUpperCase()}
       icon={''}
     >
-      <FloatButton href={`${currentUrl}`} description='EN' />
-      <FloatButton href={`/id${currentUrl}`} description='ID' />
+      <FloatButton shape='circle' href={`${currentUrl}`} description='EN' />
+      <FloatButton shape='circle' href={`/id${currentUrl}`} description='ID' />
     </FloatButton.Group>
   );
 }

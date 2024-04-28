@@ -63,6 +63,20 @@ export const CardStyle = styled.div`
         display: block;
         transition: all 0.3s ease-in-out;
       }
+      p {
+        font-family: 'poppins';
+        font-size: 14px;
+        color: #fff;
+        padding: 0;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        transition: all 0.3s ease-in-out;
+      }
+
       .ant-rate-star.ant-rate-star-zero {
         .anticon svg {
           color: #c6c6c6;
@@ -107,6 +121,11 @@ export const CardStyle = styled.div`
           color: #fadb14;
           transition: all 0.3s ease-in-out;
           text-align: center;
+        }
+        > p {
+          -webkit-line-clamp: 10;
+          text-align: center;
+          transition: all 0.3s ease-in-out;
         }
       }
     }

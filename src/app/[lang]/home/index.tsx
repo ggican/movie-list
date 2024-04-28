@@ -7,6 +7,8 @@ import MovieSliderLoading from './components/MovieCardSlider/MovieSliderLoading'
 import MovieCardLoading from './components/MovieCard/MovieCardLoading';
 import MovieCard from './components/MovieCard/MovieCard';
 import { HomeProvider, useHomeContext } from './context';
+import Link from 'next/link';
+import useLang from '@/hooks/dictionaries';
 
 type HomeProps = {
   params: {
@@ -14,6 +16,7 @@ type HomeProps = {
   };
 };
 function HomeElement({ params }: HomeProps) {
+  const t = useLang(params?.lang);
   const { data, isLoading, onLove, onLoadData } = useHomeContext();
   return (
     <>
@@ -46,7 +49,13 @@ function HomeElement({ params }: HomeProps) {
             data?.map((item: MovieList, key: number) => {
               return (
                 <Col key={key} xs={24} sm={12} md={12} lg={12} xl={8}>
-                  <MovieCard {...item} onLove={onLove}></MovieCard>
+                  <Link prefetch href={`/${params?.lang}/movie/${item?.id}`}>
+                    <MovieCard
+                      {...item}
+                      desc={t('movieDesc')}
+                      onLove={onLove}
+                    ></MovieCard>
+                  </Link>
                 </Col>
               );
             })}

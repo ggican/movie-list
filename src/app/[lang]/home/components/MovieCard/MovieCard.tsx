@@ -4,8 +4,6 @@ import { HeartFilled, HeartOutlined } from '@ant-design/icons';
 import { Button, Flex, Rate } from 'antd';
 import { MovieList } from '@/services/movie';
 import { CardStyle } from './MovieCard.style';
-import { useHomeContext } from '../../context';
-import MovieCardLoading from './MovieCardLoading';
 
 const MovieCard: React.FC<MovieList> = ({
   id,
@@ -14,6 +12,7 @@ const MovieCard: React.FC<MovieList> = ({
   title,
   year,
   love,
+  desc,
   onLove
 }) => {
   const handleClickLove = (e: any) => {
@@ -51,6 +50,7 @@ const MovieCard: React.FC<MovieList> = ({
         </Flex>
         <h4>{title}</h4>
         <span>{year}</span>
+        <p>{desc}</p>
       </div>
     </CardStyle>
   );

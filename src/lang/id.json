@@ -6,11 +6,14 @@
   "products": {
     "cart": "Masukan keranjang"
   },
+  "movieDesc": "Setelah peristiwa dahsyat di Avengers: Infinity War (2018), alam semesta berada dalam reruntuhan. Dengan bantuan sekutu yang tersisa, para Avengers berkumpul sekali lagi untuk membalikkan tindakan Thanos dan memulihkan keseimbangan alam semesta.",
   "recentMovie": "FILM BARU",
   "trendingMovie": "FILM SEDANG TRENDING",
   "movieNews": "BERITA FILM",
   "page.favorite.head.title": "Daftar film di sukai",
   "page.favorite.head.meta.description": "Daftar film yang di sukai",
   "page.favorite.title": "Daftar film di sukai",
-  "page.favorite.description": "Daftar film yang di sukai"
+  "page.favorite.description": "Daftar film yang di sukai",
+  "star": "Bintang",
+  "releaseDate": "Tanggal Rilis"
 }

@@ -75,7 +75,6 @@ const HomeProvider: React.FC<HomeProvidersProps> = ({ children }) => {
         love: currentLove[item?.id]
       };
     });
-    console.log(allData, 'masuk sini');
 
     setAllData(
       allData.map(item => {

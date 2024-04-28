@@ -22,7 +22,5 @@ type HomeProps = {
 };
 
 export default async function Home({ params: { lang } }: HomeProps) {
-  const intl = await getIntl(lang);
   return <HomePage params={{ lang }}></HomePage>;
-  // return <div> {intl.formatMessage({ id: 'page.home.description' })}</div>;
 }

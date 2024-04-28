@@ -5,6 +5,8 @@ import { MovieList } from '@/services/movie';
 import MovieCard from '../../home/components/MovieCard/MovieCard';
 import { FavoriteProvider, useFavoriteContext } from '../context';
 import MovieCardLoading from '../../home/components/MovieCard/MovieCardLoading';
+import Link from 'next/link';
+import useLang from '@/hooks/dictionaries';
 
 type HomeProps = {
   params: {
@@ -12,6 +14,7 @@ type HomeProps = {
   };
 };
 function FavoriteElement({ params }: HomeProps) {
+  const t = useLang(params?.lang);
   const { displayData, onLove, isLoading } = useFavoriteContext();
   return (
     <>
@@ -35,7 +38,13 @@ function FavoriteElement({ params }: HomeProps) {
               .map((item: MovieList, key: number) => {
                 return (
                   <Col key={key} xs={24} sm={12} md={12} lg={12} xl={8}>
-                    <MovieCard {...item} onLove={onLove}></MovieCard>
+                    <Link prefetch href={`/${params?.lang}/movie/${item?.id}`}>
+                      <MovieCard
+                        {...item}
+                        desc={t('movieDesc')}
+                        onLove={onLove}
+                      ></MovieCard>
+                    </Link>
                   </Col>
                 );
               })
