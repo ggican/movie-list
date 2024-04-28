@@ -18,9 +18,10 @@ export default function LayoutLang({ params }: LayoutLangProps) {
       style={{ right: 10, bottom: 10 }}
       description={params?.lang.toUpperCase()}
       icon={''}
+      shape='square'
     >
-      <FloatButton shape='circle' href={`${currentUrl}`} description='EN' />
-      <FloatButton shape='circle' href={`/id${currentUrl}`} description='ID' />
+      <FloatButton shape='square' href={`${currentUrl}`} description='EN' />
+      <FloatButton shape='square' href={`/id${currentUrl}`} description='ID' />
     </FloatButton.Group>
   );
 }
