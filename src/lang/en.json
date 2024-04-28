@@ -1,0 +1,16 @@
+{
+  "page.home.head.title": "Movie News",
+  "page.home.head.meta.description": "Movie News List",
+  "page.home.title": "Movie News",
+  "page.home.description": "Movie News List",
+  "products": {
+    "cart": "Add to Cart"
+  },
+  "recentMovie": "RECENT MOVIE",
+  "trendingMovie": "TRENDING MOVIE",
+  "movieNews": "MOVIE NEWS",
+  "page.favorite.head.title": "Movie Like",
+  "page.favorite.head.meta.description": "List Movie Like",
+  "page.favorite.title": "Movie Like",
+  "page.favorite.description": "List Movie Like"
+}

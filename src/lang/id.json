@@ -1,0 +1,16 @@
+{
+  "page.home.head.title": "Film Terbaru",
+  "page.home.head.meta.description": "Daftar Film Terbaru",
+  "page.home.title": "Film Terbaru",
+  "page.home.description": "Daftar Film Terbaru",
+  "products": {
+    "cart": "Masukan keranjang"
+  },
+  "recentMovie": "FILM BARU",
+  "trendingMovie": "FILM SEDANG TRENDING",
+  "movieNews": "BERITA FILM",
+  "page.favorite.head.title": "Daftar film di sukai",
+  "page.favorite.head.meta.description": "Daftar film yang di sukai",
+  "page.favorite.title": "Daftar film di sukai",
+  "page.favorite.description": "Daftar film yang di sukai"
+}
