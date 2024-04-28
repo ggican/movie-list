@@ -14,7 +14,7 @@ type MoveDetailProps = {
 };
 
 const ENDPOINT = 'https://private-2fff44-bncfetest.apiary-mock.com/movies';
-export const getMovieDetailService = cache(async (id: string): Promise<any> => {
+const getMovieDetailService = cache(async (id: string): Promise<any> => {
   try {
     const result = await fetch(`${ENDPOINT}/${id}`);
     return await result.json();
@@ -40,7 +40,6 @@ export async function generateMetadata(
 
 export default async function MoveDetail({ params }: MoveDetailProps) {
   const { data } = await getMovieDetailService(params?.id);
-  const intl = await getIntl(params?.lang);
   return (
     <div>
       <MovieCardDetail
