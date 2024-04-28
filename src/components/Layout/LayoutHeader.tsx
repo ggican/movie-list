@@ -1,17 +1,16 @@
 'use client';
 import { Layout } from 'antd';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 
 const { Header } = Layout;
 
-type LayoutSideBarProps = {
+type LayoutHeaderProps = {
   params: {
     lang: string;
   };
 };
 
-export default function LayoutHeader({ params }: LayoutSideBarProps) {
+export default function LayoutHeader({ params }: LayoutHeaderProps) {
   return (
     <Header
       style={{
@@ -20,7 +19,8 @@ export default function LayoutHeader({ params }: LayoutSideBarProps) {
         position: 'sticky',
         top: 0,
         zIndex: 999,
-        width: '100%'
+        width: '100%',
+        backgroundColor: '#fff'
       }}
     >
       <Link style={{ marginRight: 10 }} href={`/${params?.lang}`}>
